@@ -6,7 +6,7 @@ This is a simple tray widget using `appindicator` to switch [`asusctl`](https://
 - Added radio items to change cpu governor via cpupower
 - Added radio items to change different tdp levels via ryzenadj
 
-# Requirements
+### Requirements
 1. Obviously needs ryzenadj and cpupower installed.
 2. Add both cpupower and ryzenadj so sudo works without password query for them
 
