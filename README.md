@@ -1,6 +1,24 @@
 # asusctltray
 This is a simple tray widget using `appindicator` to switch [`asusctl`](https://gitlab.com/asus-linux/asus-nb-ctrl) profiles stored in `/etc/asusd/asusd.conf` and easily switch between dual graphics modes. Profiles are read from the config file dynamically so custom profiles are totally supported
 
+## Changes in this fork
+
+- Added radio items to change cpu governor via cpupower
+- Added radio items to change different tdp levels via ryzenadj
+
+# Requirements
+1. Obviously needs ryzenadj and cpupower installed.
+2. Add both cpupower and ryzenadj so sudo works without password query for them
+
+Create a new file `/etc/sudoers.d/asusctltray` and add
+
+```
+%wheel ALL = NOPASSWD: /usr/bin/cpupower
+%wheel ALL = NOPASSWD: /usr/bin/ryzenadj
+```
+
+Make sure your user is in the group wheel or adjust the sudoers entry accordingly
+
 ## Table of contents
 - [asusctltray](#asusctltray)
   - [Table of contents](#table-of-contents)
